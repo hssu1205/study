@@ -1,0 +1,42 @@
+/* Dark blue theme base */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #0a0f2c;
+  color: #ffffff;
+  font-family: 'Segoe UI', sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#app {
+  text-align: center;
+}
+
+button {
+  background-color: #1a2b6b;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #2e3e90;
+}
+
+#warning-msg {
+  margin-top: 20px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #ff4d4d;
+}
+
+.hidden {
+  display: none;
+}
