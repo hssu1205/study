@@ -1,16 +1,24 @@
-import Swal from 'sweetalert2';
+import './style.css'
+import javascriptLogo from './javascript.svg'
+import viteLogo from '/vite.svg'
+import { setupCounter } from './counter.js'
 
-document.addEventListener("DOMContentLoaded", () => {
-  const button = document.getElementById("warning-btn");
+document.querySelector('#app').innerHTML = `
+  <div>
+    <a href="https://vite.dev" target="_blank">
+      <img src="${viteLogo}" class="logo" alt="Vite logo" />
+    </a>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
+      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
+    </a>
+    <h1>Hello Vite!</h1>
+    <div class="card">
+      <button id="counter" type="button"></button>
+    </div>
+    <p class="read-the-docs">
+      Click on the Vite logo to learn more
+    </p>
+  </div>
+`
 
-  button.addEventListener("click", () => {
-    Swal.fire({
-      icon: 'warning',
-      title: 'Warning!',
-      text: 'I said do not click this button',
-      confirmButtonColor: '#1a2b6b',
-      background: '#0a0f2c',
-      color: '#ffffff'
-    });
-  });
-});
+setupCounter(document.querySelector('#counter'))
